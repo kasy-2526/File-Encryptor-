@@ -1,5 +1,3 @@
-package Encrypt_decrypt;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -7,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Random;
-class Encryptor
+public class Encryptor
 {
     private static Encryptor encrypter = new Encryptor();
     private static boolean deleteOriginal;
@@ -52,7 +50,7 @@ class Encryptor
         InputStream is = null;
         OutputStream os = null;
 
-        dest = new File(dest.getPath().concat("/").concat(getRandomName(10, "Ayush!!")));
+        dest = new File(dest.getPath().concat("/").concat(getRandomName(10, "encrypted")));
         try
         {
             is = new FileInputStream(source);
